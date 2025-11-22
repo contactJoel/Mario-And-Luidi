@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-mario-bross {
+    height: 200px;
+}
+
+Button {
+    color: white;
+    background: #c51111;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.mario-luigi {
+    height: 500px;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.caixa-principal {
+    color: white;
+    width: 40%;
+}
+
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.link-whatsapp img {
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+
+}
+
+.header img {
+    height: 80px;
+
+}
+
+.header a {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.header :hover {
+    cursor: pointer;
+
+}
+
+button:hover {
+    background: #43a038;
+    transition: 0.5s ease;
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 0.5s ease-in-out;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(98, 98, 98);
+    padding-left: 10px;
+    outline-color: greenyellow;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    padding-top: 10px;
+    outline-color: greenyellow;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 1) 60%);
+    transition: visibity 2s ease-in-out;
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+}
+
+.header a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0000;
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-out;
+
+}
+
+.header a:hover::after {
+    transform: scaleX(1);
+
+}
+
+@media (max-width: 900px) {
+    p {
+        display: none;
+    }
+
+    .caixa-mae {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .caixa-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .header {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header {
+        font-size: 10px;
+    }
+
+    .header a {
+        color: #ffffff;
+        text-decoration: none;
+
+        position: relative;
+
+        display: inline-block;
+
+    }
+
+    .header a:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+
+        height: 2px;
+
+        bottom: 0;
+
+        left: 0;
+        background-color: #ff0000;
+
+        transform-origin: bottom left;
+
+        transition: transform 0.3s ease-out;
+
+    }
+
+    .header a:hover::after {
+        transform: scaleX(1);
+    }
+
+}
+
+
+/*
+inicial
+top:30%;
+left:-300%;
+
+final
+top:30%;
+left:50%;
+transform: translateX(-50%);
+*/
