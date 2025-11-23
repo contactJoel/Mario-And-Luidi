@@ -4,67 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario e Luidi</title>
+    <title>Encanadores Mario & Luigi: Resolvendo seus problemas com estilo!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="mascara-formulario" onclick="esconderform()"></div>
+    
+    <div class="mascara-formulario" onclick="esconderform()" role="presentation"></div>
 
-    <div class="header">
-        <img src="./img/logo-header.png" alt="logo-mario">
-        <a>Homer</a>
-        <a>Nossos Serviços</a>
-        <a>Fale Conosco</a>
-    </div>
+    
+    <header class="header">
+        <img src="./img/logo-header.png" alt="Logo dos Encanadores Mario & Luigi">
+        
+        <nav aria-label="Navegação Principal">
+            <a href="#home">Home</a>
+            <a href="#servicos">Nossos Serviços</a>
+            <a href="#contato">Fale Conosco</a>
+        </nav>
+    </header>
 
-    <div class="caixa-mae">
-        <div class="caixa-principal">
-            <img src="./img/logo.png" class="logo-mario-bross" alt="logo do mario bros">
-            <p><h1>ENCANADORES MARIO & LUIDI</h1></p>
+    
+    <main class="caixa-mae">
+        
+        <section class="caixa-principal">
+            
+            <img src="./img/logo.png" class="logo-mario-bross" alt="Logo do Mario Bros">
+            <h1>ENCANADORES MARIO & LUIGI</h1>
 
-            <p><br>Resolvendo seus problemas com estilo – e na hora que você mais precisa!<br>
-                Vazamento inesperado?<br> Cano estourado? Torneira jorrando água pra todo lado? 🛠️💧<br>
-                Chama o Mario e o Luidi!<br>
-                Somos especialistas em emergências hidráulicas, prontos pra agir com:</p>
-            <p>
-                <br>
-                ✅ Atendimento rápido e eficiente<br>
-                ✅ Plantão 24 horas – dia, noite, feriados e fins de semana<br>
-                ✅ Serviço profissional e de confiança<br>
-                ✅ Soluções definitivas, sem gambiarra
-            </p>
-            <p><br>Não espere o problema piorar.<br>
-                Ligue agora para Encanadores Mario & Luidi📲<br>
-                Seu encanador de confiança, sempre pronto pra salvar o seu dia!<br>
-            </p>
-            <button onclick="cliqueinobotao()"> Entre em contato</button>
-        </div>
-        <img src="./img/mario.png" alt="logo de mario e luigi" class="mario-luigi">
-    </div>
-    <div class="caixa-video">
-        <video src="./img/video.mp4" autoplay muted loop></video>
+            
+            <p>Resolvendo seus problemas com estilo – e na hora que você mais precisa!</p>
+            <p>Vazamento inesperado? Cano estourado? Torneira jorrando água pra todo lado? 🛠️💧</p>
+            <p>Chama o Mario e o Luigi!</p>
+            <p>Somos especialistas em emergências hidráulicas, prontos pra agir com:</p>
+
+            
+            <ul>
+                <li>✅ Atendimento rápido e eficiente</li>
+                <li>✅ Plantão 24 horas – dia, noite, feriados e fins de semana</li>
+                <li>✅ Serviço profissional e de confiança</li>
+                <li>✅ Soluções definitivas, sem gambiarra</li>
+            </ul>
+
+            <p>Não espere o problema piorar. Ligue agora para Encanadores Mario & Luigi📲</p>
+            <p>Seu encanador de confiança, sempre pronto pra salvar o seu dia!</p>
+
+            
+            <button type="button" onclick="cliqueinobotao()">Entre em contato</button>
+        </section>
+
+        
+        <img src="./img/mario.png" alt="Mario e Luigi prontos para o serviço" class="mario-luigi">
+    </main>
+
+   
+    <section class="caixa-video">
+        
+        <video src="./img/video.mp4" autoplay muted loop playsinline></video>
         <div class="mascara"></div>
-    </div>
+    </section>
 
-    <a href="https://wa.me/5588121086587?text=Quero%20ajuda%20dos%20encanadores." class="link-whatsapp">
-        <img src="./img/whatsapp.png" alt="whatsapp">
+    
+    <a href="https://wa.me/5588121086587?text=Quero%20ajuda%20dos%20encanadores." class="link-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+        <img src="./img/whatsapp.png" alt="Ícone do WhatsApp">
     </a>
 
-    <form class="formulario-fale-conosco" action="https://formcarry.com/s/4ZtNB_kxl91" method="POST"
+    
+    <section id="contato" class="formulario-fale-conosco-secao">
+        
+       <form class="formulario-fale-conosco" action="https://formcarry.com/s/4ZtNB_kxl91" method="POST"
         enctype="multipart/form-data">
+            <h2>Solicite um Orçamento</h2>
+            <input placeholder="Seu Nome" type="text" name="nome" required>
+            <input placeholder="Seu Telefone" type="tel" name="telefone" required>
+            <textarea placeholder="Descreva seu problema aqui..." name="duvida" required></textarea>
+            <button type="submit"> Pedir Orçamento</button>
+        </form>
+    </section>
 
-        <input placeholder="Seu Nome" type="text" name="nome">
-
-        <input placeholder="Seu Telefone" type="tel" name="telefone">
-
-        <textarea placeholder="Digite seu problema aqui..." name="duvida"></textarea>
-
-        <button type="submit"> Pedir Orçamento</button>
-
-    </form>
-
+    
+    <script src="javascript.js"></script>
 </body>
-<script src="javascript.js"></script>
 
 </html>
