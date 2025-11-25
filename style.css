@@ -191,8 +191,52 @@ textarea {
 
 }
 
+@media (min-width: 900px) {
+    .videomobile {
+        display: none;
+    }
+
+}
+
 
 @media (max-width: 900px) {
+
+    .videoport {
+        display: none;
+    }
+
+    .videomobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* Adicione left: 0 para garantir que comece no canto esquerdo */
+        width: 100%;
+        /* ESSENCIAL: Ocupa toda a largura da tela */
+        height: 100%;
+        /* ESSENCIAL: Ocupa toda a altura da tela */
+        overflow: hidden;
+        /* Garante que nada do vídeo vaze para fora */
+        z-index: -1;
+    }
+
+    .videoend {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        /* Garante que a largura se ajuste automaticamente */
+        height: auto;
+        /* Garante que a altura se ajuste automaticamente */
+        position: absolute;
+        /* Agora é absoluto em relação ao .caixa-video fixo */
+        top: 50%;
+        /* Move o ponto de referência para o centro */
+        left: 50%;
+        /* Move o ponto de referência para o centro */
+        transform: translate(-50%, -50%);
+        /* Centraliza o vídeo */
+    }
+
+
     p {
         display: none;
     }
@@ -200,12 +244,14 @@ textarea {
     .caixa-mae {
         flex-direction: column;
         padding: 10px;
+
     }
 
     .caixa-principal {
         display: flex;
         align-items: center;
         flex-direction: column;
+
     }
 
     .mario-luigi {
@@ -261,6 +307,15 @@ textarea {
 
     .header a:hover::after {
         transform: scaleX(1);
+    }
+
+    .mario-desentupidor {
+        display: flex;
+        align-items: flex-end;
+        top: auto;
+        bottom: -20px;
+        margin-bottom: 0;
+        padding: auto;
     }
 
 }
