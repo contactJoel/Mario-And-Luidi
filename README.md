@@ -5,9 +5,7 @@
   
 Link do Website:
 
-Org: Alex and Joel
 
-<a href="https://lnkd.in/dWy-xRhp">
+<a href="https://joel-rian.github.io/Mario-And-Luidi/">
 <img src="https://media.tenor.com/PQEVmEXbkGgAAAAM/fist-bump-mario.gif"></a>
 
-Obs: Clique na imagem 😁
